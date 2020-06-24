@@ -7,7 +7,7 @@ Pour exporter les données, sélectionnez uniquement les colonnes :
      - Plx (H11)
      - B-V (H37)
      - SpType (H76)
-Puis dans la colonne préférence sélectionner "max = unlimmited" et format de sortie "XLM+ CSV (astrores)" et ne pas modifier le reste.
+Puis dans la colonne préférence sélectionner "max = unlimmited" et format de sortie "XLM+ CSV (astrores)" et ne pas modifier le reste. Cliquez sur Submit et placez le fichier télécharger dans le même répertoire que le code python.
 
 Cette première version n'utilise pas le type spectrale pour la représentation (a venir)
 
