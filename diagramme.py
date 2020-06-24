@@ -11,7 +11,7 @@ spctr_type = []
 mag_abs = []
 
 #partie qui recupère les données et les met en formes
-f = open("C:/Users/fsold/Downloads/astronomie/diagramme_hr/vizier_votable.tsv", "r")
+f = open("vizier_votable.tsv", "r")
 ligne = True 
 while ligne: #parcours tout le fichier
     ligne = f.readline() #lit une ligne
