@@ -34,19 +34,19 @@ while ligne: #parcours tout le fichier
             spctr_type.append(donne_ligne[4])
 f.close()
 
-for j in range(len(HIP)) : #parcour toute la liste des étoiles pour calculer la magnitude absolue
-    mag_j = Vmag[j] -5*(-1+np.log10(1/(dist[j]*(10**(-3) )))) #calcul de la magitude absolue M=m-5(log(D)-1) et D = 1/plx avec plx en arcsecond
-    mag_abs.append(mag_j)
+Vmag = np.array(Vmag)
+dist = np.array(dist)
+
+mag_abs = Vmag -5*(-1+np.log10(1/(dist*(10**(-3) )))) #calcul de la magitude absolue M=m-5(log(D)-1) et D = 1/plx avec plx en arcsecond
 
 print("nombre d'étoiles considéré", len(mag_abs))
 
-mag_abs_ar = np.array(mag_abs)
 B_V = np.array(color)
 
 ax = plt.gca()
 ax.set_xlim(-0.5, 2.5)
 ax.set_ylim(15, -10) #permet de retourner le diagramme
-plt.plot(B_V, mag_abs_ar, linestyle = 'none', marker = ',')
+plt.plot(B_V, mag_abs, linestyle = 'none', marker = ',')
 plt.title("Diagramme de Hertzsprung-Russell \n d'après le catalogue Hipparcos")
 plt.xlabel("Couleur (B-V)")
 plt.ylabel("magnitude absolue")
